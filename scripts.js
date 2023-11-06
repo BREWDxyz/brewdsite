@@ -17,6 +17,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
         tab.classList.add('active');
         targetPane.classList.add('active');
+
+        // Save the active tab to localStorage
+        saveActiveTab(targetId);
+    }
+
+    // Function to save the active tab to localStorage
+    function saveActiveTab(tabId) {
+        localStorage.setItem('activeTab', tabId);
+    }
+
+    // Function to load the active tab from localStorage
+    function loadActiveTab(panes) {
+        const activeTabId = localStorage.getItem('activeTab');
+        if (activeTabId) {
+            const activeTab = document.querySelector(`.tab-button[data-target="${activeTabId}"]`);
+            if (activeTab) {
+                activateTab(activeTab, panes);
+            }
+        }
     }
 
     // Get all tab buttons and panes
@@ -30,7 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Load the active tab from localStorage if it exists
+    loadActiveTab(panes);
+    
     // If you have other scripts to include, you can add them below
     // ...
-
 });
