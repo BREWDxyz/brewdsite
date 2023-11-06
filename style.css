@@ -45,11 +45,12 @@ a:hover {
 /* Header styles */
 .header {
     display: flex; /* Makes the header a flex container */
-    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    flex-wrap: row; /* Allows items to wrap to the next line on smaller screens */
     align-items: center; /* Centers items vertically */
     justify-content: space-between; /* Spreads items out */
     padding: 20px 0; /* Adjust padding as needed */
 }
+
 .logo {
     width: 100px; /* Specific logo width */
     height: auto;
@@ -57,10 +58,12 @@ a:hover {
 
 /* Navigation Styles */
 nav {
-    display: flex;
+    display: block;
+    text-align: center;
     justify-content: space-around;
     padding: 10px 0;
 }
+
 
 nav ul {
     list-style: none;
@@ -71,7 +74,7 @@ nav ul {
 }
 
 .nav-item a {
-    color: #efe0c9; /* Lightened Parchment Beige for nav links */
+    color: #564a3e; /* Lightened Parchment Beige for nav links */
     padding: 7px 15px;
     border-radius: 4px; /* Rounded corners for nav links */
     transition: background-color 0.3s;
@@ -90,6 +93,8 @@ nav ul {
 .welcome-text {
     margin-bottom: 30px;
     font-size: 125%;
+    flex: 1; /* Allows the title to fill the space to the right of the logo */
+    padding-left: 20px;
 }
 
 /* AI Chat Integration Section */
