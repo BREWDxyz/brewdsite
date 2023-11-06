@@ -1,0 +1,160 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography - Steampunk-inspired for headings and modern for body */
+body {
+    font-family: 'Roboto Slab', serif; /* Modern slab serif for body text */
+    line-height: 1.6;
+    color: #5E4F3A; /* Deep Bronze for text */
+    background-color: #F2E5BC; /* Parchment Beige for background */
+    background-image: url('images/background.png'); /* Path to your background image */
+    background-repeat: repeat;
+    background-size: cover; /* Ensures background covers the entire area */
+    background-attachment: fixed; /* Background stays fixed during scroll */
+    background-blend-mode: multiply; /* Blends background with color */
+    opacity: 0.1; /* Reduces the opacity of the background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'IM Fell English SC', serif; /* Old-world feel for headings */
+    color: #B5A642; /* Brass Gold for headings */
+    font-weight: normal; /* Maintain font style */
+    font-size: 110%; /* Increases font size by 10% */
+}
+
+a {
+    color: #CB6D51; /* Copper Red for links */
+    text-decoration: none; /* No underline for a clean look */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for accessibility */
+}
+
+/* Layout */
+.container {
+    max-width: 1200px; /* Max width for content */
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #5C3A24; /* Dark Wood Brown for header */
+    color: #F2E5BC; /* Parchment Beige for header text */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 200px; /* Specific logo width */
+    height: auto;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 5px;
+}
+
+.nav-item a {
+    color: #F2E5BC; /* Parchment Beige for nav links */
+    padding: 7px 15px;
+    border-radius: 4px; /* Rounded corners for nav links */
+    transition: background-color 0.3s;
+}
+
+.nav-item a:hover {
+    background-color: #6D695C; /* Victorian Velvet for hover effect */
+}
+
+/* Main Section Styles */
+.main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.welcome-text {
+    margin-bottom: 30px;
+}
+
+/* AI Chat Integration Section */
+.chat-section {
+    max-width: 1000px;
+    margin: 20px auto; /* Centers the section with auto margin on the sides and a top margin */
+    padding: 40px 20px; /* Padding inside the chat section */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a subtle shadow around the chat section */
+    background: rgba(232, 232, 232, 0.9); /* Light grey background with reduced opacity for the chat section */
+    border-radius: 8px; /* Rounded corners for the chat section */
+}
+
+.tab-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0; /* Margin below the nav to separate from content */
+    border-bottom: 2px solid #e0e0e0; /* Border to differentiate tabs from content */
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: 8px 8px 0 0;
+    color: #666;
+    transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+.tab-button:hover {
+    color: #333; /* Darker text on hover for better interaction feedback */
+}
+
+.tab-button.active {
+    color: #000; /* Black color for the active tab for high visibility */
+    border-bottom: 3px solid #3498db; /* Blue bottom border for the active tab */
+}
+
+.tab-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Maintains the original margin-top value for consistency */
+    padding: 20px;
+    border: none; /* Removes border from content for a cleaner look */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #3E2C1B; /* Dark Brown for footer */
+    color: #F2E5BC; /* Parchment Beige for footer text */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin-bottom: 10px; /* Space below paragraph text */
+}
+
+.footer a {
+    color: #B5A642; /* Brass Gold for footer links */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.footer a:hover {
+    color: #F2E5BC; /* Parchment Beige for hover effect */
+}

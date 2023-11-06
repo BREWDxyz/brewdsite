@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWD Academy Homeschooling</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/3.50.2/gradio.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Roboto+Slab:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <img src="images/logo.png" alt="BREWD Academy Logo" class="logo">
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="#chat">AI Chat</a></li>
+                <li class="nav-item"><a href="#resources">Learning Resources</a></li>
+                <li class="nav-item"><a href="#contact">Contact/Feedback</a></li>
+            </ul>
+        </nav>
+        <h1 class="welcome-text">BREWD Academy Homeschooling</h1> <!-- Changed to h1 for semantic importance -->
+    </header>
+
+<!-- AI Chat Integration Section -->
+<section id="chat" class="chat-section">
+    <!-- Tab navigation -->
+    <div class="tab-nav">
+        <button class="tab-button active" data-target="#web-component-1">BREWD Diffusion</button>
+        <button class="tab-button" data-target="#web-component-2">Code Llama Drama</button>
+        <button class="tab-button" data-target="#chat-3">Chat Interface 3</button>
+        <button class="tab-button" data-target="#chat-4">Chat Interface 4</button>
+        <!-- Additional buttons can be added here as needed -->
+    </div>
+
+    <!-- Tab content -->
+    <div class="tab-content">
+        <!-- Chat Interface 1 -->
+        <div class="tab-pane active" id="web-component-1" role="tabpanel">
+            <gradio-app src="https://brewdacademy-brewd-diffusion.hf.space"></gradio-app>
+        </div>
+        <!-- Chat Interface 2 -->
+        <div class="tab-pane" id="web-component-2" role="tabpanel">
+            <gradio-app src="https://brewdacademy-codelllamadrama.hf.space"></gradio-app>
+        </div>
+        <!-- Placeholder for Chat Interface 3 -->
+        <div class="tab-pane" id="chat-3" role="tabpanel">
+            <!-- Content for Chat Interface 3 will go here -->
+        </div>
+        <!-- Placeholder for Chat Interface 4 -->
+        <div class="tab-pane" id="chat-4" role="tabpanel">
+            <!-- Content for Chat Interface 4 will go here -->
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Learning Resources Section -->
+    <section id="resources" class="resources-section">
+        <header class="section-header">
+            <h2>Learning Resources</h2>
+            <p>Explore our curated list of resources to enhance your learning experience.</p>
+        </header>
+
+        <div class="resource-list">
+            <!-- Resource items with "article" tag for semantic structure -->
+            <article class="resource-item">
+                <h3><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
+                <p>Discover a vast array of projects, libraries, and collaborative opportunities on GitHub. You can also find our organization's repositories and contribute to the BREWD Academy projects.</p>
+            </article>
+
+            <article class="resource-item">
+                <h3><a href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a></h3>
+                <p>Hugging Face is an essential platform for Natural Language Processing (NLP) and Machine Learning (ML) enthusiasts. Browse models, datasets, and more to deepen your understanding of these fields.</p>
+            </article>
+
+            <article class="resource-item">
+                <h3><a href="https://www.kaggle.com" target="_blank" rel="noopener noreferrer">Kaggle</a></h3>
+                <p>Kaggle offers a platform for data science competitions, datasets, and notebooks. Engage with a community of data science practitioners and learn by doing.</p>
+            </article>
+
+            <article class="resource-item">
+                <h3><a href="https://www.coursera.org" target="_blank" rel="noopener noreferrer">Coursera</a></h3>
+                <p>Coursera provides courses from universities and institutions around the world. Explore a variety of topics to find courses that align with your learning goals.</p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Contact / Feedback Section -->
+    <section id="contact" class="contact-section">
+        <header class="section-header">
+            <h2>Contact / Feedback</h2>
+            <p>Your feedback is valuable to us. Please feel free to share your thoughts or ask any questions.</p>
+        </header>
+        
+        <form action="mailto:feedback@brewd.xyz" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send Feedback</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 BREWD Academy. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
