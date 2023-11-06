@@ -9,25 +9,25 @@
 body {
     font-family: 'Roboto Slab', serif; /* Modern slab serif for body text */
     line-height: 1.6;
-    color: #5E4F3A; /* Deep Bronze for text */
-    background-color: #F2E5BC; /* Parchment Beige for background */
+    color: #3a2e22; /* Darkened text color for better contrast */
+    background-color: #f2e5bc; /* Parchment Beige for background */
     background-image: url('images/background.png'); /* Path to your background image */
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover; /* Ensures background covers the entire area */
     background-attachment: fixed; /* Background stays fixed during scroll */
     background-blend-mode: multiply; /* Blends background with color */
-    opacity: 0.1; /* Reduces the opacity of the background */
+    opacity: 0.9; /* Adjusted for a more faded background */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'IM Fell English SC', serif; /* Old-world feel for headings */
-    color: #B5A642; /* Brass Gold for headings */
+    color: #806c50; /* Darkened Brass Gold for headings */
     font-weight: normal; /* Maintain font style */
     font-size: 110%; /* Increases font size by 10% */
 }
 
 a {
-    color: #CB6D51; /* Copper Red for links */
+    color: #9e7053; /* Darkened Copper Red for links */
     text-decoration: none; /* No underline for a clean look */
 }
 
@@ -44,8 +44,8 @@ a:hover {
 
 /* Header Styles */
 .header {
-    background-color: #5C3A24; /* Dark Wood Brown for header */
-    color: #F2E5BC; /* Parchment Beige for header text */
+    background-color: #3a2e22; /* Darkened Wood Brown for header */
+    color: #efe0c9; /* Lightened Parchment Beige for header text */
     padding: 20px 0;
     text-align: center;
 }
@@ -71,14 +71,14 @@ nav ul {
 }
 
 .nav-item a {
-    color: #F2E5BC; /* Parchment Beige for nav links */
+    color: #efe0c9; /* Lightened Parchment Beige for nav links */
     padding: 7px 15px;
     border-radius: 4px; /* Rounded corners for nav links */
     transition: background-color 0.3s;
 }
 
 .nav-item a:hover {
-    background-color: #6D695C; /* Victorian Velvet for hover effect */
+    background-color: #564a3e; /* Darkened Victorian Velvet for hover effect */
 }
 
 /* Main Section Styles */
@@ -101,47 +101,122 @@ nav ul {
     border-radius: 8px; /* Rounded corners for the chat section */
 }
 
-.tab-nav {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0; /* Margin below the nav to separate from content */
-    border-bottom: 2px solid #e0e0e0; /* Border to differentiate tabs from content */
-}
+/* Additional Styles for page elements and components */
 
-.tab-button {
+/* Button Styles */
+button {
+    background-color: #806c50; /* Darkened Brass Gold for buttons */
+    color: #efe0c9; /* Lightened Parchment Beige for button text */
     padding: 10px 20px;
-    cursor: pointer;
-    background: none;
     border: none;
-    outline: none;
-    border-radius: 8px 8px 0 0;
-    color: #666;
-    transition: color 0.3s ease; /* Smooth transition for color changes */
+    border-radius: 4px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.tab-button:hover {
-    color: #333; /* Darker text on hover for better interaction feedback */
+button:hover {
+    background-color: #9e7053; /* Slightly lighter Brass Gold on hover */
 }
 
-.tab-button.active {
-    color: #000; /* Black color for the active tab for high visibility */
-    border-bottom: 3px solid #3498db; /* Blue bottom border for the active tab */
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Light grey border for inputs */
 }
 
-.tab-content {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Maintains the original margin-top value for consistency */
-    padding: 20px;
-    border: none; /* Removes border from content for a cleaner look */
+input[type="submit"] {
+    background-color: #3a2e22; /* Darkened Wood Brown for submit button */
+    color: #efe0c9; /* Lightened Parchment Beige for submit button text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Rounded corners for submit button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+input[type="submit"]:hover {
+    background-color: #564a3e; /* Darkened Victorian Velvet on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Light grey border for table cells */
+    text-align: left;
+}
+
+th {
+    background-color: #3a2e22; /* Darkened Wood Brown for table headers */
+    color: #efe0c9; /* Lightened Parchment Beige for table headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f2e5bc; /* Zebra striping for tables */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-item {
+        margin-bottom: 5px;
+    }
+
+    .nav-item a {
+        display: block;
+        width: 100%;
+    }
+
+    .container,
+    .chat-section {
+        padding: 0 10px;
+    }
+}
+
+/* Custom animations or transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+/* Utility classes for spacing, visibility, etc. */
+.hidden {
+    display: none;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* ... other styles as needed */
+
 
 /* Footer Styles */
 .footer {
-    background-color: #3E2C1B; /* Dark Brown for footer */
-    color: #F2E5BC; /* Parchment Beige for footer text */
+    background-color: #2c2217; /* Darkened Brown for footer */
+    color: #efe0c9; /* Lightened Parchment Beige for footer text */
     text-align: center;
     padding: 20px 0;
 }
@@ -151,10 +226,10 @@ nav ul {
 }
 
 .footer a {
-    color: #B5A642; /* Brass Gold for footer links */
+    color: #806c50; /* Darkened Brass Gold for footer links */
     transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .footer a:hover {
-    color: #F2E5BC; /* Parchment Beige for hover effect */
+    color: #efe0c9; /* Lightened Parchment Beige for hover effect */
 }
