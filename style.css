@@ -45,8 +45,8 @@ a:hover {
 /* Header styles */
 .header {
     display: flex; /* Makes the header a flex container */
-    flex-wrap: row; /* Allows items to wrap to the next line on smaller screens */
-    align-items: center; /* Centers items vertically */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: flex-start; /* Centers items vertically */
     justify-content: space-between; /* Spreads items out */
     padding: 20px 0; /* Adjust padding as needed */
 }
@@ -54,6 +54,7 @@ a:hover {
 .logo {
     width: 100px; /* Specific logo width */
     height: auto;
+    margin-bottom: 10px;
 }
 
 /* Navigation Styles */
@@ -91,8 +92,9 @@ nav ul {
 }
 
 .welcome-text {
-    margin-bottom: 30px;
-    font-size: 125%;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    font-size: 150%;
     flex: 1; /* Allows the title to fill the space to the right of the logo */
     padding-left: 20px;
 }
